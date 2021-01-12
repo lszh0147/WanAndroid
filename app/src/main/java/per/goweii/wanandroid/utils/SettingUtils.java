@@ -44,8 +44,8 @@ public class SettingUtils {
     private boolean mShowReadRecord = true;
     private boolean mShowTop = true;
     private boolean mShowBanner = true;
-    private boolean mHideAboutMe = false;
-    private boolean mHideOpen = false;
+    private boolean mHideAboutMe = true;
+    private boolean mHideOpen = true;
     private boolean mWebSwipeBackEdge = true;
     private int mRvAnim = RvAnimUtils.RvAnim.NONE;
     private int mUrlInterceptType = HostInterceptUtils.TYPE_NOTHING;
