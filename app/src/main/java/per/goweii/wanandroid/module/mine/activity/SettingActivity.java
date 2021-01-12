@@ -216,7 +216,7 @@ public class SettingActivity extends BaseActivity<SettingPresenter> implements S
 
     @Override
     protected void loadData() {
-        presenter.update(false);
+//        presenter.update(false);
         presenter.getCacheSize();
     }
 
@@ -332,7 +332,7 @@ public class SettingActivity extends BaseActivity<SettingPresenter> implements S
                         .show();
                 break;
             case R.id.ll_update:
-                presenter.update(true);
+//                presenter.update(true);
                 break;
             case R.id.ll_cache:
                 TipDialog.with(getContext())
