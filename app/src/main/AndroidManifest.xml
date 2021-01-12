@@ -61,10 +61,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".module.main.activity.CrashActivity"
-            android:configChanges="keyboard|keyboardHidden|screenSize|fontScale|density|orientation"
-            android:process=":error_activity" />
+<!--        <activity-->
+<!--            android:name=".module.main.activity.CrashActivity"-->
+<!--            android:configChanges="keyboard|keyboardHidden|screenSize|fontScale|density|orientation"-->
+<!--            android:process=":error_activity" />-->
         <activity
             android:name=".module.main.activity.WebActivity"
             android:configChanges="keyboard|keyboardHidden|screenSize|fontScale|density|orientation" />

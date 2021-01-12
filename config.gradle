@@ -131,8 +131,8 @@ ext {
             blurred                : "com.github.goweii:blurred:$versions.blurred",
             lottie                 : "com.airbnb.android:lottie:$versions.lottie",
 
-            buglyCrashreport       : "com.tencent.bugly:crashreport:$versions.buglyCrashreport",
-            crashActivity          : "cat.ereza:customactivityoncrash:$versions.crashActivity",
+//            buglyCrashreport       : "com.tencent.bugly:crashreport:$versions.buglyCrashreport",
+//            crashActivity          : "cat.ereza:customactivityoncrash:$versions.crashActivity",
             jinrishici             : "com.jinrishici:android-sdk:$versions.jinrishici",
     ]
 }
