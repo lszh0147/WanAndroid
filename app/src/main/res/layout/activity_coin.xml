@@ -66,10 +66,10 @@
 
     </com.kennyc.view.MultiStateView>
 
-    <per.goweii.wanandroid.utils.ad.widget.AdBanner2Container
-        android:id="@+id/adc"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:background="#f8f8f8" />
+<!--    <per.goweii.wanandroid.utils.ad.widget.AdBanner2Container-->
+<!--        android:id="@+id/adc"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        tools:background="#f8f8f8" />-->
 
 </LinearLayout>

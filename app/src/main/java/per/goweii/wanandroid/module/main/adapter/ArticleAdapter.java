@@ -15,7 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.chad.library.adapter.base.BaseMultiItemQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.chad.library.adapter.base.entity.MultiItemEntity;
-import com.qq.e.ads.nativ.NativeExpressADView;
+//import com.qq.e.ads.nativ.NativeExpressADView;
 
 import java.util.Collection;
 import java.util.List;
@@ -30,9 +30,9 @@ import per.goweii.wanandroid.module.main.model.ArticleBean;
 import per.goweii.wanandroid.utils.ArticleDiffCallback;
 import per.goweii.wanandroid.utils.ImageLoader;
 import per.goweii.wanandroid.utils.UrlOpenUtils;
-import per.goweii.wanandroid.utils.ad.AdEntity;
-import per.goweii.wanandroid.utils.ad.AdForListFactory;
-import per.goweii.wanandroid.utils.ad.widget.AdContainer;
+//import per.goweii.wanandroid.utils.ad.AdEntity;
+//import per.goweii.wanandroid.utils.ad.AdForListFactory;
+//import per.goweii.wanandroid.utils.ad.widget.AdContainer;
 import per.goweii.wanandroid.widget.CollectView;
 
 /**
@@ -96,13 +96,13 @@ public class ArticleAdapter extends BaseMultiItemQuickAdapter<MultiItemEntity, B
         return null;
     }
 
-    public AdEntity getAdEntity(int position) {
-        MultiItemEntity entity = getItem(position);
-        if (entity != null && entity.getItemType() == ITEM_TYPE_AD) {
-            return (AdEntity) entity;
-        }
-        return null;
-    }
+//    public AdEntity getAdEntity(int position) {
+//        MultiItemEntity entity = getItem(position);
+//        if (entity != null && entity.getItemType() == ITEM_TYPE_AD) {
+//            return (AdEntity) entity;
+//        }
+//        return null;
+//    }
 
     public void notifyAllUnCollect() {
         forEach(new ArticleAdapter.ArticleForEach() {
@@ -152,9 +152,9 @@ public class ArticleAdapter extends BaseMultiItemQuickAdapter<MultiItemEntity, B
             case ITEM_TYPE_ARTICLE:
                 convertArticle(helper, (ArticleBean) item);
                 break;
-            case ITEM_TYPE_AD:
-                convertAd(helper, (AdEntity) item);
-                break;
+//            case ITEM_TYPE_AD:
+//                convertAd(helper, (AdEntity) item);
+//                break;
         }
     }
 
@@ -176,37 +176,37 @@ public class ArticleAdapter extends BaseMultiItemQuickAdapter<MultiItemEntity, B
         });
     }
 
-    private void convertAd(BaseViewHolder helper, AdEntity item) {
-        AdContainer adc = helper.getView(R.id.adc);
-        if (item.getView() != null) {
-            final NativeExpressADView adView = item.getView();
-            item.setPosition(helper.getAdapterPosition());
-            if (adc.getChildCount() > 0 && adc.getChildAt(0) == adView) {
-                return;
-            }
-            adView.render();
-            if (scrolling) {
-                return;
-            }
-            adc.setVisibility(View.INVISIBLE);
-            if (adc.getChildCount() > 0) {
-                adc.removeAllViews();
-            }
-            if (adView.getParent() != null) {
-                ((ViewGroup) adView.getParent()).removeView(adView);
-            }
-            adc.addView(adView);
-            adc.setVisibility(View.VISIBLE);
-        }
-    }
+//    private void convertAd(BaseViewHolder helper, AdEntity item) {
+//        AdContainer adc = helper.getView(R.id.adc);
+//        if (item.getView() != null) {
+//            final NativeExpressADView adView = item.getView();
+//            item.setPosition(helper.getAdapterPosition());
+//            if (adc.getChildCount() > 0 && adc.getChildAt(0) == adView) {
+//                return;
+//            }
+//            adView.render();
+//            if (scrolling) {
+//                return;
+//            }
+//            adc.setVisibility(View.INVISIBLE);
+//            if (adc.getChildCount() > 0) {
+//                adc.removeAllViews();
+//            }
+//            if (adView.getParent() != null) {
+//                ((ViewGroup) adView.getParent()).removeView(adView);
+//            }
+//            adc.addView(adView);
+//            adc.setVisibility(View.VISIBLE);
+//        }
+//    }
 
     private boolean scrolling = false;
-    private AdForListFactory mAdForListFactory = null;
+//    private AdForListFactory mAdForListFactory = null;
 
     @Override
     public void onAttachedToRecyclerView(RecyclerView recyclerView) {
         super.onAttachedToRecyclerView(recyclerView);
-        mAdForListFactory = AdForListFactory.create(recyclerView.getContext(), this);
+//        mAdForListFactory = AdForListFactory.create(recyclerView.getContext(), this);
         recyclerView.setOnScrollListener(new RecyclerView.OnScrollListener() {
             @Override
             public void onScrollStateChanged(@NonNull RecyclerView recyclerView, int newState) {
@@ -217,25 +217,25 @@ public class ArticleAdapter extends BaseMultiItemQuickAdapter<MultiItemEntity, B
                         LinearLayoutManager manager = (LinearLayoutManager) recyclerView.getLayoutManager();
                         int first = manager.findFirstVisibleItemPosition();
                         int last = manager.findLastVisibleItemPosition();
-                        for (int i = first; i <= last; i++) {
-                            AdEntity adEntity = getAdEntity(i - getHeaderLayoutCount());
-                            if (adEntity != null && adEntity.getView() != null) {
-                                boolean needNotify = true;
-                                View view = manager.findViewByPosition(i);
-                                if (view != null) {
-                                    AdContainer adc = view.findViewById(R.id.adc);
-                                    if (adc != null && adc.getChildCount() > 0 && adc.getChildAt(0) == adEntity.getView()) {
-                                        needNotify = false;
-                                        return;
-                                    }
-                                } else {
-                                    needNotify = false;
-                                }
-                                if (needNotify) {
-                                    notifyItemChanged(i);
-                                }
-                            }
-                        }
+//                        for (int i = first; i <= last; i++) {
+//                            AdEntity adEntity = getAdEntity(i - getHeaderLayoutCount());
+//                            if (adEntity != null && adEntity.getView() != null) {
+//                                boolean needNotify = true;
+//                                View view = manager.findViewByPosition(i);
+//                                if (view != null) {
+//                                    AdContainer adc = view.findViewById(R.id.adc);
+//                                    if (adc != null && adc.getChildCount() > 0 && adc.getChildAt(0) == adEntity.getView()) {
+//                                        needNotify = false;
+//                                        return;
+//                                    }
+//                                } else {
+//                                    needNotify = false;
+//                                }
+//                                if (needNotify) {
+//                                    notifyItemChanged(i);
+//                                }
+//                            }
+//                        }
                     }
                 } else {
                     scrolling = true;
@@ -246,9 +246,9 @@ public class ArticleAdapter extends BaseMultiItemQuickAdapter<MultiItemEntity, B
 
     @Override
     public void onDetachedFromRecyclerView(@NonNull RecyclerView recyclerView) {
-        if (mAdForListFactory != null) {
-            mAdForListFactory.destroy();
-        }
+//        if (mAdForListFactory != null) {
+//            mAdForListFactory.destroy();
+//        }
         super.onDetachedFromRecyclerView(recyclerView);
     }
 

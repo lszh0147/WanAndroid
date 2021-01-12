@@ -8,130 +8,130 @@
     android:orientation="vertical"
     android:padding="16dp">
 
-    <RelativeLayout
-        android:id="@+id/rl_top"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_vertical">
+<!--    <RelativeLayout-->
+<!--        android:id="@+id/rl_top"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:gravity="center_vertical">-->
 
-        <LinearLayout
-            android:id="@+id/ll_new"
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:visibility="gone"
-            android:gravity="center_vertical"
-            android:layout_alignTop="@+id/tv_author"
-            android:layout_alignBottom="@+id/tv_author"
-            android:layout_centerVertical="true">
+<!--        <LinearLayout-->
+<!--            android:id="@+id/ll_new"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="0dp"-->
+<!--            android:visibility="gone"-->
+<!--            android:gravity="center_vertical"-->
+<!--            android:layout_alignTop="@+id/tv_author"-->
+<!--            android:layout_alignBottom="@+id/tv_author"-->
+<!--            android:layout_centerVertical="true">-->
 
-            <TextView
-                android:id="@+id/tv_new"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="5dp"
-                android:text="新"
-                android:textColor="@color/text_main"
-                android:textSize="@dimen/text_notes" />
+<!--            <TextView-->
+<!--                android:id="@+id/tv_new"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginRight="5dp"-->
+<!--                android:text="新"-->
+<!--                android:textColor="@color/text_main"-->
+<!--                android:textSize="@dimen/text_notes" />-->
 
-        </LinearLayout>
+<!--        </LinearLayout>-->
 
-        <TextView
-            android:id="@+id/tv_author"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_toRightOf="@+id/ll_new"
-            android:background="@drawable/bg_press_color_surface_radius_small"
-            android:textColor="@color/text_second"
-            android:textSize="@dimen/text_notes"
-            android:text="一条小广告" />
+<!--        <TextView-->
+<!--            android:id="@+id/tv_author"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:layout_toRightOf="@+id/ll_new"-->
+<!--            android:background="@drawable/bg_press_color_surface_radius_small"-->
+<!--            android:textColor="@color/text_second"-->
+<!--            android:textSize="@dimen/text_notes"-->
+<!--            android:text="一条小广告" />-->
 
-        <TextView
-            android:id="@+id/tv_tag"
-            android:visibility="gone"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignTop="@+id/tv_author"
-            android:layout_alignBottom="@+id/tv_author"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="5dp"
-            android:layout_toRightOf="@+id/tv_author"
-            android:background="@drawable/article_tag_bg"
-            android:gravity="center"
-            android:paddingLeft="3dp"
-            android:paddingRight="3dp"
-            android:textColor="@color/text_main"
-            android:textSize="@dimen/text_time"
-            android:text="广告" />
+<!--        <TextView-->
+<!--            android:id="@+id/tv_tag"-->
+<!--            android:visibility="gone"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignTop="@+id/tv_author"-->
+<!--            android:layout_alignBottom="@+id/tv_author"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:layout_marginLeft="5dp"-->
+<!--            android:layout_toRightOf="@+id/tv_author"-->
+<!--            android:background="@drawable/article_tag_bg"-->
+<!--            android:gravity="center"-->
+<!--            android:paddingLeft="3dp"-->
+<!--            android:paddingRight="3dp"-->
+<!--            android:textColor="@color/text_main"-->
+<!--            android:textSize="@dimen/text_time"-->
+<!--            android:text="广告" />-->
 
-        <TextView
-            android:id="@+id/tv_time"
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_alignTop="@+id/tv_author"
-            android:layout_alignBottom="@+id/tv_author"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:textColor="@color/text_third"
-            android:textSize="@dimen/text_notes"
-            android:text="刚刚" />
+<!--        <TextView-->
+<!--            android:id="@+id/tv_time"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="0dp"-->
+<!--            android:layout_alignTop="@+id/tv_author"-->
+<!--            android:layout_alignBottom="@+id/tv_author"-->
+<!--            android:layout_alignParentRight="true"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:textColor="@color/text_third"-->
+<!--            android:textSize="@dimen/text_notes"-->
+<!--            android:text="刚刚" />-->
 
-    </RelativeLayout>
+<!--    </RelativeLayout>-->
 
-    <per.goweii.wanandroid.utils.ad.widget.AdContainer
-        android:id="@+id/adc"
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:layout_below="@+id/rl_top"
-        android:layout_marginTop="10dp"
-        android:orientation="horizontal" />
+<!--&lt;!&ndash;    <per.goweii.wanandroid.utils.ad.widget.AdContainer&ndash;&gt;-->
+<!--&lt;!&ndash;        android:id="@+id/adc"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_height="80dp"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_below="@+id/rl_top"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_marginTop="10dp"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:orientation="horizontal" />&ndash;&gt;-->
 
-    <LinearLayout
-        android:id="@+id/ll_top"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:layout_below="@+id/adc"
-        android:layout_marginTop="10dp"
-        android:layout_centerVertical="true">
+<!--    <LinearLayout-->
+<!--        android:id="@+id/ll_top"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:gravity="center_vertical"-->
+<!--        android:layout_below="@+id/adc"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:layout_centerVertical="true">-->
 
-        <TextView
-            android:id="@+id/tv_top"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="5dp"
-            android:text="广告"
-            android:textColor="@color/text_accent"
-            android:textSize="@dimen/text_notes" />
+<!--        <TextView-->
+<!--            android:id="@+id/tv_top"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginRight="5dp"-->
+<!--            android:text="广告"-->
+<!--            android:textColor="@color/text_accent"-->
+<!--            android:textSize="@dimen/text_notes" />-->
 
-    </LinearLayout>
+<!--    </LinearLayout>-->
 
-    <LinearLayout
-        android:id="@+id/ll_chapter"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/adc"
-        android:layout_toRightOf="@+id/ll_top"
-        android:layout_marginTop="10dp"
-        android:orientation="horizontal">
+<!--    <LinearLayout-->
+<!--        android:id="@+id/ll_chapter"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@+id/adc"-->
+<!--        android:layout_toRightOf="@+id/ll_top"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:orientation="horizontal">-->
 
-        <TextView
-            android:id="@+id/tv_chapter_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/text_third"
-            android:textSize="@dimen/text_notes"
-            android:text="" />
+<!--        <TextView-->
+<!--            android:id="@+id/tv_chapter_name"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:textColor="@color/text_third"-->
+<!--            android:textSize="@dimen/text_notes"-->
+<!--            android:text="" />-->
 
-    </LinearLayout>
+<!--    </LinearLayout>-->
 
-    <per.goweii.wanandroid.widget.CollectView
-        android:id="@+id/cv_collect"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:visibility="gone"
-        tools:rl_checked="false"
-        android:layout_alignBottom="@+id/ll_chapter"
-        android:layout_alignParentRight="true" />
+<!--    <per.goweii.wanandroid.widget.CollectView-->
+<!--        android:id="@+id/cv_collect"-->
+<!--        android:layout_width="20dp"-->
+<!--        android:layout_height="20dp"-->
+<!--        android:visibility="gone"-->
+<!--        tools:rl_checked="false"-->
+<!--        android:layout_alignBottom="@+id/ll_chapter"-->
+<!--        android:layout_alignParentRight="true" />-->
 
 </RelativeLayout>

@@ -29,12 +29,12 @@
         tools:listitem="@layout/rv_item_knowledge_child"
         tools:spanCount="3" />
 
-    <per.goweii.wanandroid.utils.ad.widget.AdBanner2Container
-        android:id="@+id/adc"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        tools:background="#f8f8f8" />
+<!--    <per.goweii.wanandroid.utils.ad.widget.AdBanner2Container-->
+<!--        android:id="@+id/adc"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="16dp"-->
+<!--        tools:background="#f8f8f8" />-->
 
     <LinearLayout
         android:id="@+id/ll_history"

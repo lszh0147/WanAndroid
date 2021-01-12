@@ -19,7 +19,7 @@ import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.chad.library.adapter.base.entity.MultiItemEntity;
 import com.kennyc.view.MultiStateView;
-import com.qq.e.ads.nativ.NativeExpressADView;
+//import com.qq.e.ads.nativ.NativeExpressADView;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
@@ -69,7 +69,7 @@ import per.goweii.wanandroid.utils.RvAnimUtils;
 import per.goweii.wanandroid.utils.RvScrollTopUtils;
 import per.goweii.wanandroid.utils.SettingUtils;
 import per.goweii.wanandroid.utils.UrlOpenUtils;
-import per.goweii.wanandroid.utils.ad.AdForBannerFactory;
+//import per.goweii.wanandroid.utils.ad.AdForBannerFactory;
 import per.goweii.wanandroid.widget.CollectView;
 
 /**
@@ -307,41 +307,41 @@ public class HomeFragment extends BaseFragment<HomePresenter> implements ScrollT
                 loadData();
             }
         });
-        mAdForBannerFactory = AdForBannerFactory.create(getContext(), new AdForBannerFactory.OnADLoadedListener() {
-            @Override
-            public void onLoaded(@NonNull NativeExpressADView adView) {
-                if (mBanner != null && mBanner.getVisibility() == View.VISIBLE) {
-                    if (mBannerDatas != null) {
-                        boolean nonAd = true;
-                        for (int i = mBannerDatas.size() - 1; i >= 0; i--) {
-                            Object obj = mBannerDatas.get(i);
-                            if (obj instanceof NativeExpressADView) {
-                                nonAd = false;
-                            }
-                        }
-                        if (nonAd) {
-                            if (mBannerDatas.size() > 0) {
-                                mBannerDatas.add(1, adView);
-                            } else {
-                                mBannerDatas.add(0, adView);
-                            }
-                            mBanner.setImages(mBannerDatas);
-                            refreshBannerTitles();
-                            mBanner.start();
-                        }
-                    }
-                }
-            }
-        });
+//        mAdForBannerFactory = AdForBannerFactory.create(getContext(), new AdForBannerFactory.OnADLoadedListener() {
+//            @Override
+//            public void onLoaded(@NonNull NativeExpressADView adView) {
+//                if (mBanner != null && mBanner.getVisibility() == View.VISIBLE) {
+//                    if (mBannerDatas != null) {
+//                        boolean nonAd = true;
+//                        for (int i = mBannerDatas.size() - 1; i >= 0; i--) {
+//                            Object obj = mBannerDatas.get(i);
+//                            if (obj instanceof NativeExpressADView) {
+//                                nonAd = false;
+//                            }
+//                        }
+//                        if (nonAd) {
+//                            if (mBannerDatas.size() > 0) {
+//                                mBannerDatas.add(1, adView);
+//                            } else {
+//                                mBannerDatas.add(0, adView);
+//                            }
+//                            mBanner.setImages(mBannerDatas);
+//                            refreshBannerTitles();
+//                            mBanner.start();
+//                        }
+//                    }
+//                }
+//            }
+//        });
     }
 
-    private AdForBannerFactory mAdForBannerFactory = null;
+//    private AdForBannerFactory mAdForBannerFactory = null;
 
     @Override
     public void onDestroyView() {
-        if (mAdForBannerFactory != null) {
-            mAdForBannerFactory.destroy();
-        }
+//        if (mAdForBannerFactory != null) {
+//            mAdForBannerFactory.destroy();
+//        }
         super.onDestroyView();
     }
 
@@ -456,17 +456,18 @@ public class HomeFragment extends BaseFragment<HomePresenter> implements ScrollT
                             }
                         });
                         ImageLoader.banner(imageView, ((BannerBean) data).getImagePath());
-                    } else if (data instanceof NativeExpressADView) {
-                        NativeExpressADView adView = (NativeExpressADView) data;
-                        if (container.getChildCount() > 0) {
-                            container.removeAllViews();
-                        }
-                        if (adView.getParent() != null) {
-                            ((ViewGroup) adView.getParent()).removeView(adView);
-                        }
-                        container.addView(adView);
-                        adView.render();
                     }
+//                    else if (data instanceof NativeExpressADView) {
+//                        NativeExpressADView adView = (NativeExpressADView) data;
+//                        if (container.getChildCount() > 0) {
+//                            container.removeAllViews();
+//                        }
+//                        if (adView.getParent() != null) {
+//                            ((ViewGroup) adView.getParent()).removeView(adView);
+//                        }
+//                        container.addView(adView);
+//                        adView.render();
+//                    }
                 }
             });
             mBanner.setIndicatorGravity(BannerConfig.CENTER);
@@ -534,16 +535,16 @@ public class HomeFragment extends BaseFragment<HomePresenter> implements ScrollT
         }
         mBannerDatas.clear();
         mBannerDatas.addAll(data);
-        if (mAdForBannerFactory != null) {
-            NativeExpressADView adView = mAdForBannerFactory.getADView();
-            if (adView != null) {
-                if (mBannerDatas.size() > 0) {
-                    mBannerDatas.add(1, adView);
-                } else {
-                    mBannerDatas.add(0, adView);
-                }
-            }
-        }
+//        if (mAdForBannerFactory != null) {
+//            NativeExpressADView adView = mAdForBannerFactory.getADView();
+//            if (adView != null) {
+//                if (mBannerDatas.size() > 0) {
+//                    mBannerDatas.add(1, adView);
+//                } else {
+//                    mBannerDatas.add(0, adView);
+//                }
+//            }
+//        }
         mBanner.setImages(mBannerDatas);
         refreshBannerTitles();
         mBanner.start();
