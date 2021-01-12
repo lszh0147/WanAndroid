@@ -15,6 +15,14 @@ android {
             }
         }
     }
+    signingConfigs {
+        release {
+            storeFile file("TestKey.jks")
+            storePassword "123321"
+            keyAlias "Test"
+            keyPassword "123321"
+        }
+    }
     buildTypes {
         Properties properties = new Properties()
         InputStream inputStream = project.rootProject.file('local.properties').newDataInputStream()
@@ -66,6 +74,7 @@ android {
                     output.outputFileName = "$applicationId-v${defaultConfig.versionName}.apk"
                 }
             }
+            signingConfig signingConfigs.release
         }
         debug {
             buildConfigField "String", "APPID_BUGLY", '"' + APPID_BUGLY + '"'
@@ -88,6 +97,7 @@ android {
             buildConfigField "String", "DEVELOPER_ID", '"' + DEVELOPER_ID + '"'
             buildConfigField "String", "CHANGYAN_APP_ID", '"' + CHANGYAN_APP_ID + '"'
             buildConfigField "String", "CHANGYAN_APP_KEY", '"' + CHANGYAN_APP_KEY + '"'
+            signingConfig signingConfigs.release
         }
     }
     resourcePrefix ""
